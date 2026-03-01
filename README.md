@@ -57,7 +57,7 @@ that part of the configuration yourself or take it from `nixos-generate-config`.
       nixosConfigurations.basic = nixpkgs.lib.nixosSystem {
 
         modules = [
-          { config.facter.reportPath = ./facter.json; }
+          { config.hardware.facter.reportPath = ./facter.json; }
           # If you want to test out nixos-facter, you can add these dummy
           # values to make the configuration valid. Note that this likely won't boot if
           # it doesn't match your own partitioning
@@ -80,6 +80,6 @@ that part of the configuration yourself or take it from `nixos-generate-config`.
 ```nix
 # configuration.nix
 {
-  config.facter.reportPath = ./facter.json;
+  config.hardware.facter.reportPath = ./facter.json;
 }
 ```
